@@ -1,0 +1,4 @@
+.git
+.idea
+node_modules
+*.last_completed_backup

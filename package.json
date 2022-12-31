@@ -1,0 +1,28 @@
+{
+  "name": "backup-framework",
+  "version": "1.0.0",
+  "description": "1. specify dir, excluded files; auto tar with cron; if no change then skip; 2. upload to S3, or preferably GoogleDrive, etc. 3. auto prune files more than X days old 4. send heartbeat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinWang15/backup-framework.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinWang15/backup-framework/issues"
+  },
+  "homepage": "https://github.com/KevinWang15/backup-framework#readme",
+  "dependencies": {
+    "@google-cloud/local-auth": "2.1.0",
+    "axios": "^1.2.2",
+    "googleapis": "105",
+    "https-proxy-agent": "^5.0.1",
+    "sha1-file": "^3.0.0"
+  }
+}
