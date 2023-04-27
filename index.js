@@ -7,6 +7,7 @@ import {sha1File} from 'sha1-file';
 import axios from 'axios';
 
 import {uploadFileToGoogleDrive} from "./upload_file_google.js";
+import {uploadFileWithRclone} from "./upload_file_rclone.js";
 
 const config = JSON.parse(fs.readFileSync("./config.json", {encoding: "utf8"}));
 
@@ -73,7 +74,8 @@ async function sendSuccessHeartbeat() {
         await sendSuccessHeartbeat();
         process.exit(0);
     }
-    await uploadFileToGoogleDrive(tgzFilePath)
+    // await uploadFileToGoogleDrive(tgzFilePath)
+    await uploadFileWithRclone(tgzFilePath)
     await writeLastCompletedBackup()
     await sendSuccessHeartbeat();
     log(`Done`);
